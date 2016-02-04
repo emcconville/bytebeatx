@@ -22,10 +22,15 @@ int8_t aad(int t)
     return (t&t%255)-(t*3&t>>13&t>>6);
 }
 
+int8_t aada(int t)
+{
+    return t>>4|(t&(t>>5)/((t>>(7-(t>>15))&-t>>(7-(t>>15)))|t)); // droid
+}
+
 int8_t aae(int t)
 {
     return ((t*("36364689"[t>>12&7]&15))/12&128)+
-           (((((t>>12)^(t>>12)-2)%11*t)/4|t>>13)&127);
+           (((((t>>12)^(t>>12)-2)%11*t)/4|t>>13)&127); // ryg
 }
 
 int8_t aaf(int t)
@@ -40,6 +45,8 @@ int8_t aag(int t)
            +((t*(t>>17)&(t*202/100)&(t*198/100))
            -(t*(t>>17)&(t*302/100)&(t*298/100)));
 }
+
+
 
 //https://www.youtube.com/watch?v=GtQdIYUtAHg
 int8_t bba(int t)
@@ -105,7 +112,11 @@ int8_t cce(int t)
 }
 
 
-
+int8_t eea(int t)
+{
+    // http://codegolf.stackexchange.com/q/4746
+    return ((t<<1)^((t<<1)+(t>>7)&t>>12))|t>>(4-(1^7&(t>>19)))|t>>7;
+}
 
 
 
