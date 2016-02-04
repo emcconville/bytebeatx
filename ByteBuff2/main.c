@@ -48,45 +48,6 @@ int main(int argc, const char * argv[]) {
         if (argv[i][0] == '+') {
             session.sound.sampleRate = atof(&(argv[i][1]));
         } else if (argv[i][0] == '-') {
-            /*if (strncmp(&(argv[i][1]), "aaa", 3) == 0) {
-                session.sound.cb = aaa;
-            } else if (strncmp(&(argv[i][1]), "aab", 3) == 0) {
-                session.sound.cb = aab;
-            } else if (strncmp(&(argv[i][1]), "aac", 3) == 0) {
-                session.sound.cb = aac;
-            } else if (strncmp(&(argv[i][1]), "aad", 3) == 0) {
-                session.sound.cb = aad;
-            } else if (strncmp(&(argv[i][1]), "aae", 3) == 0) {
-                session.sound.cb = aae;
-            } else if (strncmp(&(argv[i][1]), "aaf", 3) == 0) {
-                session.sound.cb = aaf;
-            } else if (strncmp(&(argv[i][1]), "aag", 3) == 0) {
-                session.sound.cb = aag;
-            } else if (strncmp(&(argv[i][1]), "bba", 3) == 0) {
-                session.sound.cb = bba;
-            } else if (strncmp(&(argv[i][1]), "bbb", 3) == 0) {
-                session.sound.cb = bbb;
-            } else if (strncmp(&(argv[i][1]), "bbc", 3) == 0) {
-                session.sound.cb = bbc;
-            } else if (strncmp(&(argv[i][1]), "bbd", 3) == 0) {
-                session.sound.cb = bbd;
-            } else if (strncmp(&(argv[i][1]), "bbe", 3) == 0) {
-                session.sound.cb = bbe;
-            } else if (strncmp(&(argv[i][1]), "bbf", 3) == 0) {
-                session.sound.cb = bbf;
-            } else if (strncmp(&(argv[i][1]), "bbg", 3) == 0) {
-                session.sound.cb = bbg;
-            } else if (strncmp(&(argv[i][1]), "cca", 3) == 0) {
-                session.sound.cb = cca;
-            } else if (strncmp(&(argv[i][1]), "ccb", 3) == 0) {
-                session.sound.cb = ccb;
-            } else if (strncmp(&(argv[i][1]), "ccc", 3) == 0) {
-                session.sound.cb = ccc;
-            } else if (strncmp(&(argv[i][1]), "ccd", 3) == 0) {
-                session.sound.cb = ccd;
-            } else if (strncmp(&(argv[i][1]), "cce", 3) == 0) {
-                session.sound.cb = cce;
-            } else */
             if (strncmp(&(argv[i][1]), "width", 5) == 0) {
                 session.image.width = atoi(argv[++i]);
             } else if (strncmp(&(argv[i][1]), "height", 6) == 0) {
@@ -106,6 +67,12 @@ int main(int argc, const char * argv[]) {
                     "\n";
                     printf("%s", help_message);
                     print_all_labels();
+                    printf("\nAvailabel Frequencies:\n"
+                           "    +48000 (DVD)\n"
+                           "    +41000 (CD)\n"
+                           "    +22050 (mp3)\n"
+                           "    +11025 (tape)\n"
+                           "    +8000  (default 8-bit)\n");
                     return 0;
                 } else {
                     session.sound.cb = find_callback_by_label(&(argv[i][1]));
