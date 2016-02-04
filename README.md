@@ -16,3 +16,13 @@ Always run signals produced here into an compressor/envelope/amp/attenuator/atte
                                     $~ Reduce
                                     |
                                     +-->[ you ]
+
+## Installation
+
+Just ensure your on OS X 10.11, and have Xcode installed
+
+    git clone https://github.com/emcconville/bytebeatx.git
+    cd bytebeatx
+    xcodebuild
+    sudo cp build/Release/bytebeat /usr/local/bin/bytebeat
+
