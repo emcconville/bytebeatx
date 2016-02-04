@@ -1,8 +1,9 @@
 #ifndef byte_buff_here
 #define byte_buff_here
-
+/* Standard */
 #include <sys/types.h>
-
+/* Apple */
+#import <CoreServices/CoreServices.h>
 
 /*!
  * @abstract Pointer to bytebeat function

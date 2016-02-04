@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
         .sound = {
             .sampleRate = 8000.0 /*  48000.0 44100.0 22050.0 11025.0 8000.0 */,
             .cursor = 0,
-            .cb = aaa            
+            .cb = find_callback_by_label("aaa")
         }
     };
     int i;
@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
         if (argv[i][0] == '+') {
             session.sound.sampleRate = atof(&(argv[i][1]));
         } else if (argv[i][0] == '-') {
-            if (strncmp(&(argv[i][1]), "aaa", 3) == 0) {
+            /*if (strncmp(&(argv[i][1]), "aaa", 3) == 0) {
                 session.sound.cb = aaa;
             } else if (strncmp(&(argv[i][1]), "aab", 3) == 0) {
                 session.sound.cb = aab;
@@ -86,7 +86,8 @@ int main(int argc, const char * argv[]) {
                 session.sound.cb = ccd;
             } else if (strncmp(&(argv[i][1]), "cce", 3) == 0) {
                 session.sound.cb = cce;
-            } else if (strncmp(&(argv[i][1]), "width", 5) == 0) {
+            } else */
+            if (strncmp(&(argv[i][1]), "width", 5) == 0) {
                 session.image.width = atoi(argv[++i]);
             } else if (strncmp(&(argv[i][1]), "height", 6) == 0) {
                 session.image.height = atoi(argv[++i]);
@@ -104,10 +105,14 @@ int main(int argc, const char * argv[]) {
                     "    bytebeat -width <int> -height <int> -image <path>\n"
                     "\n";
                     printf("%s", help_message);
+                    print_all_labels();
                     return 0;
                 } else {
-                    fprintf(stderr, "Don't know what %s is.\n", argv[i]);
-                    return 1;
+                    session.sound.cb = find_callback_by_label(&(argv[i][1]));
+                    if (session.sound.cb == NULL) {
+                        fprintf(stderr, "Don't know what %s is.\n", argv[i]);
+                        return 1;
+                    }
                 }
             }
         }

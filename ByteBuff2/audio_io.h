@@ -7,5 +7,6 @@
 void audio_startup(AudioUnit * unit, session_t * session);
 void audio_teardown(AudioUnit * unit);
 
+byte_beat find_callback_by_label(const char * token);
 
 #endif

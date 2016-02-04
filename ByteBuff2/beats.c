@@ -1,4 +1,7 @@
 
+/* Standard */
+#include "string.h"
+/* Me */
 #include "beats.h"
 
 int8_t aaa(int t)
@@ -119,10 +122,54 @@ int8_t eea(int t)
 }
 
 
+static audio_beat_t catalog[50] = {
+    {"aaa", "viznut", aaa},
+    {"aab",    "bst", aab},
+    {"aac",     "kb", aac},
+    {"aad", "viznut", aad},
+    {"aae",    "ryg", aae},
+    {"aaf","stephth", aaf},
+    {"aag", "viznut", aag},
+    {"bba", "viznut", bba},
+    {"bbb", "tejeez", bbb},
+    {"bbc",   "visy", bbc},
+    {"bbd", "tejeez", bbd},
+    {"bbe",   "visy", bbe},
+    {"bbf", "tejeez", bbf},
+    {"bbg", "viznut", bbg},
+    {"cca", "viznut", cca},
+    {"ccb",   "red-", ccb},
+    {"ccc",       "", ccc},
+    {"ccd",       "", ccd},
+    {"cce",  "skurk", cce},
+    { NULL,     NULL, NULL}
+};
 
 
+byte_beat find_callback_by_label(const char * token)
+{
+    size_t index = 0;
+    byte_beat BB = NULL;
+    while(catalog[index].label != NULL) {
+        if(strcasecmp(catalog[index].label, token) == 0) {
+            BB = catalog[index].callback;
+            break;
+        }
+        index++;
+    };
+    
+    return BB;
+}
 
-
-
+void print_all_labels()
+{
+    printf("Availabel Lables:\n");
+    size_t index = 0;
+    while(catalog[index].label != NULL) {
+        printf("    -%s  by %s\n", catalog[index].label, catalog[index].author);
+        index++;
+    };
+    
+}
 
 

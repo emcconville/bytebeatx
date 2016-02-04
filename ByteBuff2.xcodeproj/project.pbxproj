@@ -80,13 +80,21 @@
 			name = music;
 			sourceTree = "<group>";
 		};
-		09ED48BA1C5DA4D300311872 = {
+		09A50B4C1C63820500592E54 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
 				09299D051C6265FA00ACCF06 /* CoreServices.framework */,
 				09299D031C62633B00ACCF06 /* ImageIO.framework */,
 				09299D011C62532B00ACCF06 /* CoreGraphics.framework */,
 				09ED48CD1C5DA4E700311872 /* AudioToolbox.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		09ED48BA1C5DA4D300311872 = {
+			isa = PBXGroup;
+			children = (
+				09A50B4C1C63820500592E54 /* OS X */,
 				09ED48C51C5DA4D300311872 /* ByteBuff2 */,
 				09ED48C41C5DA4D300311872 /* Products */,
 			);
