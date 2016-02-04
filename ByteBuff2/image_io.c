@@ -24,7 +24,7 @@ void image_startup(session_t * session)
     CGColorSpaceRef gray = CGColorSpaceCreateDeviceGray();
     CGImageRef image = CGImageCreate(
                                      w, h,
-                                     4, 4, w,
+                                     8, 8, w,
                                      gray, kCGBitmapByteOrderDefault|kCGImageAlphaNone,
                                      provider, NULL,
                                      false, kCGRenderingIntentDefault);

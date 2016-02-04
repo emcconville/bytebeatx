@@ -9,6 +9,7 @@
 #import "byte_buff.h"
 #import "beats.h"
 #import "audio_io.h"
+#import "image_io.h"
 
 static volatile int loop;
 
@@ -25,6 +26,8 @@ void generate_sound(session_t * session)
 
 void generate_image(session_t * session)
 {
+    image_startup(session);
+    image_teardown(); // Does nothing
 }
 
 
