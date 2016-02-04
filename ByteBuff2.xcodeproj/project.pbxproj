@@ -40,6 +40,7 @@
 		09299D051C6265FA00ACCF06 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		0953652F1C6197D40079E3DD /* beats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = beats.c; sourceTree = "<group>"; };
 		095365301C6197D40079E3DD /* beats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beats.h; sourceTree = "<group>"; };
+		09A50B4D1C640C0D00592E54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		09ED48C31C5DA4D300311872 /* bytebeat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bytebeat; sourceTree = BUILT_PRODUCTS_DIR; };
 		09ED48C61C5DA4D300311872 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		09ED48CD1C5DA4E700311872 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -94,6 +95,7 @@
 		09ED48BA1C5DA4D300311872 = {
 			isa = PBXGroup;
 			children = (
+				09A50B4D1C640C0D00592E54 /* README.md */,
 				09A50B4C1C63820500592E54 /* OS X */,
 				09ED48C51C5DA4D300311872 /* ByteBuff2 */,
 				09ED48C41C5DA4D300311872 /* Products */,
