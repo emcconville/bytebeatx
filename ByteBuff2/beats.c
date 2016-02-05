@@ -192,10 +192,10 @@ byte_beat find_callback_by_label(const char * token)
 
 void print_all_labels()
 {
-    printf("Availabel Labels:\n");
+    printf("Available Labels:\n");
     size_t index = 0;
     while(catalog[index].label != NULL) {
-        printf("    -%s  by %s\n", catalog[index].label, catalog[index].author);
+        printf("    -%s   by %s\n", catalog[index].label, catalog[index].author);
         index++;
     };
     

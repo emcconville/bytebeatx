@@ -70,12 +70,12 @@ int main(int argc, const char * argv[]) {
                     "\n";
                     printf("%s", help_message);
                     print_all_labels();
-                    printf("\nAvailabel Frequencies:\n"
+                    printf("\nAvailable Frequencies:\n"
                            "    +48000 (DVD)\n"
                            "    +41000 (CD)\n"
                            "    +22050 (mp3)\n"
                            "    +11025 (tape)\n"
-                           "    +8000  (default 8-bit)\n");
+                           "    +8000  (8-bit) default\n");
                     return 0;
                 } else {
                     session.sound.cb = find_callback_by_label(&(argv[i][1]));
