@@ -49,6 +49,10 @@ int8_t aag(int t)
            -(t*(t>>17)&(t*302/100)&(t*298/100)));
 }
 
+int8_t aah(int t)
+{
+    return t*(t^t+(t>>15|1)^(t-1280^t)>>10);
+}
 
 
 //https://www.youtube.com/watch?v=GtQdIYUtAHg
@@ -114,6 +118,11 @@ int8_t cce(int t)
     return ((t&4096)?((t*(t^t%255)|(t>>4))>>1):(t>>3)|((t&8192)?t<<2:t)); // skurk
 }
 
+int8_t ccf(int t)
+{
+    return ((t*(t>>8|t>>9)&46&t>>8))^((t&(t>>13))|t>>6); // xpensive
+}
+
 
 int8_t eea(int t)
 {
@@ -121,6 +130,20 @@ int8_t eea(int t)
     return ((t<<1)^((t<<1)+(t>>7)&t>>12))|t>>(4-(1^7&(t>>19)))|t>>7;
 }
 
+int8_t eeb(int t)
+{
+    return ((7&(((t>>17)+1)>>2)+((t>>10)&1+2*(t>>18&1))*(("23468643"[7&t>>12]-48)+(3&t>>11))+((3&t>>17)>0)*(3&t>>9)*!(1&t>>10)*((((2+t)>>10&3)^((2+t)>>11&3))))*t*"@06+"[3&t>>15]/32);
+}
+
+int8_t eec(int t)
+{
+    return ((t>>10)&1)*(t*("23468643"[7&t>>12]-48)+t*(3&t>>11))*"@06+"[3&t>>15]/32;
+}
+
+int8_t eed(int t)
+{
+    return t*(3&t>>11)+(t&t>>11)*4*!((t>>11)%3);
+}
 
 static audio_beat_t catalog[50] = {
     {"aaa", "viznut", aaa},
@@ -130,6 +153,7 @@ static audio_beat_t catalog[50] = {
     {"aae",    "ryg", aae},
     {"aaf","stephth", aaf},
     {"aag", "viznut", aag},
+    {"aah",    "216", aah},
     {"bba", "viznut", bba},
     {"bbb", "tejeez", bbb},
     {"bbc",   "visy", bbc},
@@ -142,6 +166,11 @@ static audio_beat_t catalog[50] = {
     {"ccc",       "", ccc},
     {"ccd",       "", ccd},
     {"cce",  "skurk", cce},
+    {"ccf","xpensive",ccf},
+    {"eea",  "Jeff Burdges", eea},
+    {"eeb",  "JiminP", eeb},
+    {"eec",  "JiminP", eec},
+    {"eed",  "JiminP", eed},
     { NULL,     NULL, NULL}
 };
 
