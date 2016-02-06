@@ -4,7 +4,7 @@
 #include <sys/types.h>
 #include "byte_buff.h"
 
-// For callback directory
+// For callback catalog
 typedef struct audio_beat {
     const char * label;
     const char * author;
@@ -13,5 +13,6 @@ typedef struct audio_beat {
 
 byte_beat find_callback_by_label(const char * token);
 void print_all_labels();
+audio_beat_t * get_catalog();
 
 #endif

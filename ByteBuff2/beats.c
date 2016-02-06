@@ -201,4 +201,8 @@ void print_all_labels()
     
 }
 
+audio_beat_t * get_catalog()
+{
+    return catalog;
+}
 

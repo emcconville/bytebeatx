@@ -11,8 +11,8 @@
 void image_startup(session_t * session)
 {
     size_t
-    w = session->image.width,
-    h = session->image.height,
+        w = session->image.width,
+        h = session->image.height,
     limit = w * h;
     uint8_t * pixels = calloc(limit, sizeof(uint8_t));
     int cursor;
