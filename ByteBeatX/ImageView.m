@@ -12,10 +12,15 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+    /*
     if ([self inLiveResize]) {
         [self syncImageToProgram];
     } else {
         //[self syncImageToProgram];
+    }
+    */
+    if (callback != NULL) {
+        [self syncImageToProgram];
     }
 }
 

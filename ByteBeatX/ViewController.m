@@ -56,8 +56,12 @@
 {
     NSInteger i = [frequencies indexOfSelectedItem];
     switch (i) {
-        case 0 : session.sound.sampleRate =  8000.0; break;
-        case 1 : session.sound.sampleRate = 44100.0; break;
+        case 1 : session.sound.sampleRate = 11025.0; break;
+        case 2 : session.sound.sampleRate = 22050.0; break;
+        case 3 : session.sound.sampleRate = 44100.0; break;
+        case 4 : session.sound.sampleRate = 48000.0; break;
+        case 0 :
+        default: session.sound.sampleRate =  8000.0; break;
     }
     [self restartSound];
 }
