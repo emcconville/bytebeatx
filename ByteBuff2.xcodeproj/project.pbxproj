@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091328111C62E994005123B6 /* image_io.c in Sources */ = {isa = PBXBuildFile; fileRef = 0913280F1C62E994005123B6 /* image_io.c */; };
+		091328141C66E0E4005123B6 /* bytebeat in Resources */ = {isa = PBXBuildFile; fileRef = 09ED48C31C5DA4D300311872 /* bytebeat */; };
 		09299CFE1C62345B00ACCF06 /* audio_io.c in Sources */ = {isa = PBXBuildFile; fileRef = 09299CFC1C62345B00ACCF06 /* audio_io.c */; };
 		09299D021C62532B00ACCF06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09299D011C62532B00ACCF06 /* CoreGraphics.framework */; };
 		09299D041C62633B00ACCF06 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09299D031C62633B00ACCF06 /* ImageIO.framework */; };
@@ -255,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091328141C66E0E4005123B6 /* bytebeat in Resources */,
 				09A50B5B1C64D52200592E54 /* Assets.xcassets in Resources */,
 				09A50B5E1C64D52200592E54 /* MainMenu.xib in Resources */,
 			);
@@ -430,6 +432,7 @@
 				09A50B621C64D52200592E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09ED48BE1C5DA4D300311872 /* Build configuration list for PBXProject "ByteBuff2" */ = {
 			isa = XCConfigurationList;
