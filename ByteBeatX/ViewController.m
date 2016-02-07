@@ -24,13 +24,22 @@
     session.sound.cursor = 0;
     catalog = get_catalog();
     size_t i = 0;
+    // Clear all boiler-plate items
     [programs removeAllItems];
+    [frequencies removeAllItems];
+    
+    // Populate selection
     while(catalog[i].label) {
         NSString * text = [NSString stringWithFormat:@"%s by %s", catalog[i].label, catalog[i].author];
-        NSComboBoxCell * cell = [[NSComboBoxCell alloc] initTextCell:text];
-        [[self programs] addItemWithObjectValue:cell];
+        [programs addItemWithTitle:text];
         i++;
     }
+    /*  48000.0 44100.0 22050.0 11025.0 8000.0 */
+    for (NSString * text in @[@"8.0 kHz",@"11.0 kHz",@"22.0 kHz",@"44.1 kHz",@"48.0 kHz"])
+    {
+        [frequencies addItemWithTitle:text];
+    }
+    
     // Set default select values
     [programs selectItemAtIndex:0];
     [self selectProgram:nil];

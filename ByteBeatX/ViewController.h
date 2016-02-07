@@ -17,8 +17,8 @@
     AudioUnit unit;
     audio_beat_t * catalog;
 }
-@property (weak, nonatomic) IBOutlet NSComboBox * programs;
-@property (weak, nonatomic) IBOutlet NSComboBox * frequencies;
+@property (weak, nonatomic) IBOutlet NSPopUpButton * programs;
+@property (weak, nonatomic) IBOutlet NSPopUpButton * frequencies;
 @property (weak, nonatomic) IBOutlet NSButton * toggleButton;
 @property (weak, nonatomic) IBOutlet ImageView * imageView;
 -(IBAction)selectProgram:(id)sender;
