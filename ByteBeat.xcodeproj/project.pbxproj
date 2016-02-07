@@ -27,6 +27,16 @@
 		09ED48CE1C5DA4E700311872 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ED48CD1C5DA4E700311872 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		093ED5B91C67A9E400A08F8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09ED48BB1C5DA4D300311872 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09ED48C21C5DA4D300311872;
+			remoteInfo = bytebeat;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		09ED48C11C5DA4D300311872 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -192,6 +202,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				093ED5BA1C67A9E400A08F8B /* PBXTargetDependency */,
 			);
 			name = ByteBeatX;
 			productName = ByteBeatX;
@@ -291,6 +302,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		093ED5BA1C67A9E400A08F8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09ED48C21C5DA4D300311872 /* bytebeat */;
+			targetProxy = 093ED5B91C67A9E400A08F8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09A50B5C1C64D52200592E54 /* MainMenu.xib */ = {
