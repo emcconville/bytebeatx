@@ -152,7 +152,7 @@
 			children = (
 				09A50B4D1C640C0D00592E54 /* README.md */,
 				09A50B4C1C63820500592E54 /* OS X */,
-				09ED48C51C5DA4D300311872 /* ByteBuff2 */,
+				09ED48C51C5DA4D300311872 /* ByteBeatCLI */,
 				09A50B531C64D52200592E54 /* ByteBeatX */,
 				09ED48C41C5DA4D300311872 /* Products */,
 			);
@@ -167,7 +167,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09ED48C51C5DA4D300311872 /* ByteBuff2 */ = {
+		09ED48C51C5DA4D300311872 /* ByteBeatCLI */ = {
 			isa = PBXGroup;
 			children = (
 				091328131C62E9AF005123B6 /* music */,
@@ -175,6 +175,7 @@
 				09ED48C61C5DA4D300311872 /* main.c */,
 				09299D001C6234CF00ACCF06 /* byte_buff.h */,
 			);
+			name = ByteBeatCLI;
 			path = ByteBuff2;
 			sourceTree = "<group>";
 		};
@@ -232,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 09ED48BE1C5DA4D300311872 /* Build configuration list for PBXProject "ByteBuff2" */;
+			buildConfigurationList = 09ED48BE1C5DA4D300311872 /* Build configuration list for PBXProject "ByteBeat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -434,7 +435,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09ED48BE1C5DA4D300311872 /* Build configuration list for PBXProject "ByteBuff2" */ = {
+		09ED48BE1C5DA4D300311872 /* Build configuration list for PBXProject "ByteBeat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09ED48C81C5DA4D300311872 /* Debug */,

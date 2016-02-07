@@ -1,3 +1,6 @@
+/* Standard */
+#include <signal.h>
+/* Me */
 #include "audio_io.h"
 #include "beats.h"
 
@@ -55,7 +58,10 @@ void audio_startup(AudioUnit * unit, session_t * session)
                               0,
                               &ASBD,
                               sizeof(ASBD));
-    
+    if ( ok != noErr ) {
+        fprintf(stderr, "Unable to assign Audio Stream Description propery.\n");
+        raise(SIGABRT);
+    }
     AURenderCallbackStruct callbackInfo = {
         .inputProc       = ByteBeat,
         .inputProcRefCon = &(session->sound),
@@ -67,7 +73,15 @@ void audio_startup(AudioUnit * unit, session_t * session)
                               0,
                               &callbackInfo,
                               sizeof(callbackInfo));
+    if ( ok != noErr ) {
+        fprintf(stderr, "Unable to assign Program Callback propery.\n");
+        raise(SIGABRT);
+    }
     ok = AudioOutputUnitStart(*unit);
+    if ( ok != noErr ) {
+        fprintf(stderr, "Could not start audio output!\n");
+        raise(SIGABRT);
+    }
 }
 
 void audio_teardown(AudioUnit * unit)
