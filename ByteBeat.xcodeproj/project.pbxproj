@@ -175,8 +175,7 @@
 				09ED48C61C5DA4D300311872 /* main.c */,
 				09299D001C6234CF00ACCF06 /* byte_buff.h */,
 			);
-			name = ByteBeatCLI;
-			path = ByteBuff2;
+			path = ByteBeatCLI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +211,7 @@
 			dependencies = (
 			);
 			name = bytebeat;
-			productName = ByteBuff2;
+			productName = ByteBeatCLI;
 			productReference = 09ED48C31C5DA4D300311872 /* bytebeat */;
 			productType = "com.apple.product-type.tool";
 		};
@@ -311,12 +310,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = ByteBeatX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emcconville.ByteBeatX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_BUILDER = emcconville;
+				VERSION_INFO_PREFIX = v;
 			};
 			name = Debug;
 		};
@@ -326,11 +329,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = ByteBeatX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emcconville.ByteBeatX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_BUILDER = emcconville;
+				VERSION_INFO_PREFIX = v;
 			};
 			name = Release;
 		};
@@ -412,14 +419,22 @@
 		09ED48CB1C5DA4D300311872 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_BUILDER = emcconville;
+				VERSION_INFO_PREFIX = v;
 			};
 			name = Debug;
 		};
 		09ED48CC1C5DA4D300311872 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_BUILDER = emcconville;
+				VERSION_INFO_PREFIX = v;
 			};
 			name = Release;
 		};

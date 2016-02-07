@@ -11,6 +11,13 @@
 #import "audio_io.h"
 #import "image_io.h"
 
+#ifndef VERSION_INFO_PREFIX
+#define VERSION_INFO_PREFIX "v"
+#endif
+#ifndef CURRENT_PROJECT_VERSION
+#define CURRENT_PROJECT_VERSION "0.0.0"
+#endif
+
 static volatile int loop;
 
 void stop_loop(int g) { loop = 0; }
@@ -60,7 +67,7 @@ int main(int argc, const char * argv[]) {
             }  else {
                 if (argv[i][1] == 'h' || argv[i][1] == '?') {
                  const char * help_message = ""
-                    "ByteBeatX - v0.0.0 (_@emcconville.com)\n"
+                    "ByteBeatCLI - " VERSION_INFO_PREFIX CURRENT_PROJECT_VERSION " (_@emcconville.com)\n"
                     "\n"
                     "Generate audio:\n"
                     "    bytebeat +<frequency> -<label>\n"
