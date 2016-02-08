@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -78,14 +79,13 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="191"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="191"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uJs-Uh-OzX" customClass="ImageView">
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="uJs-Uh-OzX" customClass="ImageView">
                         <rect key="frame" x="20" y="20" width="440" height="123"/>
-                        <animations/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="bLj-le-JdG"/>
                     </imageView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OUC-pa-l9x">
@@ -93,7 +93,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="69" id="IQn-EQ-9Vw"/>
                         </constraints>
-                        <animations/>
                         <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F81-VD-3u1">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -104,7 +103,6 @@
                     </button>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6ML-Ok-O7t">
                         <rect key="frame" x="18" y="148" width="211" height="26"/>
-                        <animations/>
                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="iSy-3X-SuG" id="307-2G-DM6">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -125,7 +123,6 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="149" id="fWx-Lp-dz9"/>
                         </constraints>
-                        <animations/>
                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="m9j-rC-azq" id="H0j-Lo-7UK">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -145,6 +142,7 @@
                 <constraints>
                     <constraint firstItem="OUC-pa-l9x" firstAttribute="trailing" secondItem="uJs-Uh-OzX" secondAttribute="trailing" id="3kP-46-BqH"/>
                     <constraint firstItem="7w2-a3-244" firstAttribute="leading" secondItem="6ML-Ok-O7t" secondAttribute="trailing" constant="8" symbolic="YES" id="5v5-J7-6q1"/>
+                    <constraint firstAttribute="trailing" secondItem="uJs-Uh-OzX" secondAttribute="trailing" constant="20" id="EhO-0K-hUQ"/>
                     <constraint firstItem="OUC-pa-l9x" firstAttribute="baseline" secondItem="7w2-a3-244" secondAttribute="baseline" id="Kdn-eX-1Sv"/>
                     <constraint firstItem="6ML-Ok-O7t" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="19" id="ceQ-24-xtQ"/>
                     <constraint firstAttribute="bottom" secondItem="uJs-Uh-OzX" secondAttribute="bottom" constant="20" id="gWG-Rd-gK7"/>
@@ -155,7 +153,6 @@
                     <constraint firstItem="6ML-Ok-O7t" firstAttribute="leading" secondItem="uJs-Uh-OzX" secondAttribute="leading" id="xDs-A2-fAI"/>
                     <constraint firstItem="uJs-Uh-OzX" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="yvl-KI-4Lc"/>
                 </constraints>
-                <animations/>
             </view>
             <point key="canvasLocation" x="291" y="276.5"/>
         </window>

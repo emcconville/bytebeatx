@@ -12,16 +12,11 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    /*
-    if ([self inLiveResize]) {
-        [self syncImageToProgram];
-    } else {
-        //[self syncImageToProgram];
-    }
-    */
-    if (callback != NULL) {
-        [self syncImageToProgram];
-    }
+}
+
+-(void)viewWillDraw
+{
+    [self syncImageToProgram];
 }
 
 - (void)setProgram:(byte_beat)cb
