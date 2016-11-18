@@ -1,5 +1,11 @@
 /* Standard */
 #include <signal.h>
+/* System */
+#if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_11
+#include <CoreAudio/CoreAudio.h>
+#include <AudioToolbox/AudioToolbox.h>
+#include <AudioUnit/AudioUnit.h>
+#endif
 /* Me */
 #include "audio_io.h"
 #include "beats.h"

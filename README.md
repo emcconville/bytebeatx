@@ -28,6 +28,12 @@ Just ensure your on OS X 10.11, and have Xcode installed
     xcodebuild
     sudo cp build/Release/bytebeat /usr/local/bin/bytebeat
 
+> If your building on OS X before 10.11, be sure to set `MACOSX_DEPLOYMENT_TARGET` 
+>
+>     xcodebuild MACOSX_DEPLOYMENT_TARGET=10.10
+>
+> See [this issue](https://github.com/emcconville/bytebeatx/issues/1) for additional detail.
+
 ## Basic Usage
 
 The `bytebeat` utility runs a single "program" to generate either Audio PCM
